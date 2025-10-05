@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gutfud</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">08112005</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <mapping class="gutfud.dacs.DTO.User"/>
+        <mapping resource="User.hbm.xml"/>
+        <mapping class="gutfud.dacs.DTO.Recipe"/>
+        <mapping resource="Recipe.hbm.xml"/>
+        <mapping resource="Image.hbm.xml"/>
+        <mapping class="gutfud.dacs.DTO.Image"/>
+        <mapping resource="Ingredient.hbm.xml"/>
+        <mapping class="gutfud.dacs.DTO.Ingredient"/>
+        <mapping resource="Cmt.hbm.xml"/>
+
+
+        <mapping class="gutfud.dacs.DTO.RecipePK"/>
+        <mapping class="gutfud.dacs.DTO.IngredientPK"/>
+        <mapping class="gutfud.dacs.DTO.ImagePK"/>
+        <mapping class="gutfud.dacs.DTO.Cmt"/>
+        <mapping class="gutfud.dacs.DTO.CmtPK"/>
+        <mapping class="gutfud.dacs.DTO.Step"/>
+        <mapping class="gutfud.dacs.DTO.StepPK"/>
+        <mapping resource="Step.hbm.xml"/>
+        <mapping class="gutfud.dacs.DTO.Rate"/>
+        <mapping class="gutfud.dacs.DTO.RatePK"/>
+        <mapping resource="Rate.hbm.xml"/>
+        <mapping class="gutfud.dacs.DTO.Savedrecipedetails"/>
+        <mapping class="gutfud.dacs.DTO.SavedrecipedetailsPK"/>
+        <mapping resource="Savedrecipedetails.hbm.xml"/>
+        <mapping class="gutfud.dacs.DTO.Messages"/>
+        <mapping resource="Messages.hbm.xml"/>
+        <mapping resource="Conversations.hbm.xml"/>
+        <mapping class="gutfud.dacs.DTO.Conversations"/>
+
+
+    </session-factory>
+</hibernate-configuration>

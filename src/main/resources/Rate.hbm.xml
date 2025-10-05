@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="gutfud.dacs.DTO.Rate" table="rate" schema="gutfud">
+        <composite-id class="gutfud.dacs.DTO.RatePK">
+            <key-property name="RecipeName" column="RecipeName">
+            </key-property>
+            <key-property name="UserName" column="UserName">
+            </key-property>
+            <key-property name="RatedUserName">
+                <column name="RatedUserName"  not-null="true"/>
+            </key-property>
+        </composite-id>
+        <property name="rate">
+            <column name="Rate" sql-type="int"/>
+        </property>
+        <property name="dateRated">
+            <column name="DateRated" sql-type="date"/>
+        </property>
+    </class>
+</hibernate-mapping>

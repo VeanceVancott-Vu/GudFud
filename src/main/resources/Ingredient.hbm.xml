@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="gutfud.dacs.DTO.Ingredient" table="ingredient" schema="gutfud">
+        <composite-id class="gutfud.dacs.DTO.IngredientPK">
+            <key-property name="RecipeName" column="RecipeName">
+            </key-property>
+            <key-property name="UserName" column="UserName">
+            </key-property>
+            <key-property name="IngredientName" column="IngreName">
+            </key-property>
+        </composite-id>
+
+        <property name="ingreQuantity">
+            <column name="IngreQuantity" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

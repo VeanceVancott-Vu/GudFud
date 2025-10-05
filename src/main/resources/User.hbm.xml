@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="gutfud.dacs.DTO.User" table="user" schema="gutfud">
+        <id name="userName">
+            <column name="UserName" sql-type="varchar(100)" length="100"/>
+        </id>
+        <property name="numOfRecipe">
+            <column name="NumOfRecipe" sql-type="int" not-null="true"/>
+        </property>
+        <property name="pass">
+            <column name="Pass" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="userAvatarUrl">
+            <column name="UserAvatarURL" sql-type="mediumblob" not-null="false"/>
+        </property>
+        <property name="phone">
+            <column name="Phone" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="dateOfBirth">
+            <column name="DateOfBirth" sql-type="date" not-null="true"/>
+        </property>
+        <property name="email">
+            <column name="Email" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="title">
+            <column name="Title" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="background">
+            <column name="BackGround" sql-type="mediumblob" not-null="false"/>
+        </property>
+    </class>
+</hibernate-mapping>

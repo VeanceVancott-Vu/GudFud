@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="gutfud.dacs.DTO.Image" table="image" schema="gutfud">
+        <composite-id class="gutfud.dacs.DTO.ImagePK">
+            <key-property name="RecipeName" column="RecipeName">
+            </key-property>
+            <key-property name="UserName" column="UserName">
+            </key-property>
+            <key-property name="ImgNumber">
+                <column name="ImgNumber" sql-type="int" not-null="true"/>
+            </key-property>
+        </composite-id>
+        <property name="imgUrl">
+            <column name="ImgURL" sql-type="mediumblob" not-null="false"/>
+        </property>
+
+    </class>
+</hibernate-mapping>

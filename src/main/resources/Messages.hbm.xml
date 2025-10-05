@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="gutfud.dacs.DTO.Messages" table="messages" schema="gutfud">
+        <id name="id">
+            <column name="id" sql-type="int unsigned"/>
+            <generator class="increment"/>
+        </id>
+        <property name="conversationId">
+            <column name="ConversationID" sql-type="int unsigned" not-null="true"/>
+        </property>
+        <property name="senderId">
+            <column name="SenderID" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="messageText">
+            <column name="Message_text" sql-type="text" not-null="true"/>
+        </property>
+        <property name="image">
+            <column name="Image" sql-type="mediumblob" not-null="true"/>
+        </property>
+        <property name="timeStamp">
+            <column name="TimeStamp" sql-type="timestamp" not-null="true"/>
+        </property>
+        <property name="isRead">
+            <column name="IsRead" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

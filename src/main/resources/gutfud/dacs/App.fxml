@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" styleClass="anchorpane" stylesheets="@../../App.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gutfud.dacs.AppController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#83d769" height="165.0" layoutX="1.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="165.0" />
+      <ImageView fx:id="SmallUserAvatar" fitHeight="140.0" fitWidth="140.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../java/Images/AvatarDefault.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8ed6d00" height="114.0" layoutX="170.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="753.0" />
+      <Label alignment="CENTER" layoutX="176.0" layoutY="-8.0" prefHeight="48.0" prefWidth="1023.0" styleClass="headerlabel" text="Welcome to Your Culinary Journey! Explore a World of Flavors Discover Delicious and Healthy Recipes" textAlignment="CENTER" textFill="#ff8f00">
+         <font>
+            <Font name="Centaur" size="26.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8ed6d00" height="114.0" layoutX="979.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="214.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8ed6d00" height="616.0" layoutX="1.0" layoutY="170.0" stroke="#2e2d2d" strokeType="INSIDE" width="165.0" />
+      <CheckBox fx:id="BeefCheckBox" layoutX="183.0" layoutY="64.0" mnemonicParsing="false" text="Beef" />
+      <CheckBox fx:id="PorkCheckBox" layoutX="183.0" layoutY="98.0" mnemonicParsing="false" text="Pork" />
+      <CheckBox fx:id="ChickenCheckBox" layoutX="183.0" layoutY="133.0" mnemonicParsing="false" text="Chicken" />
+      <CheckBox fx:id="ShrimpCheckBox" layoutX="287.0" layoutY="65.0" mnemonicParsing="false" text="Shrimp" />
+      <CheckBox fx:id="EggCheckBox" layoutX="287.0" layoutY="99.0" mnemonicParsing="false" text="Eggs" />
+      <CheckBox fx:id="RiceCheckBox" layoutX="287.0" layoutY="134.0" mnemonicParsing="false" text="Rice" />
+      <CheckBox fx:id="NoodlesCheckBox" layoutX="394.0" layoutY="65.0" mnemonicParsing="false" text="Noodles" />
+      <CheckBox fx:id="FishCheckBox" layoutX="394.0" layoutY="99.0" mnemonicParsing="false" text="Fish" />
+      <CheckBox fx:id="TomatoCheckBox" layoutX="394.0" layoutY="134.0" mnemonicParsing="false" text="Tomato" />
+      <CheckBox fx:id="ChilyCheckBox" layoutX="497.0" layoutY="65.0" mnemonicParsing="false" text="Chily" />
+      <CheckBox fx:id="BellPepperCheckBox" layoutX="497.0" layoutY="99.0" mnemonicParsing="false" text="Bell pepper" />
+      <CheckBox fx:id="PotatoCheckBox" layoutX="497.0" layoutY="134.0" mnemonicParsing="false" text="Potato" />
+      <CheckBox fx:id="CarotCheckBox" layoutX="614.0" layoutY="64.0" mnemonicParsing="false" text="Carrot" />
+      <CheckBox fx:id="OnionsCheckBox" layoutX="614.0" layoutY="98.0" mnemonicParsing="false" text="Onion" />
+      <CheckBox fx:id="MushroomCheckBox" layoutX="614.0" layoutY="133.0" mnemonicParsing="false" text="Mushroom" />
+      <CheckBox fx:id="GarlicCheckBox" layoutX="718.0" layoutY="65.0" mnemonicParsing="false" text="Garlic" />
+      <CheckBox fx:id="LeafygreensCheckBox" layoutX="718.0" layoutY="99.0" mnemonicParsing="false" text="Leafy greens" />
+      <CheckBox fx:id="OilCheckBox" layoutX="718.0" layoutY="134.0" mnemonicParsing="false" text="Oil" />
+      <CheckBox fx:id="BroccoliCheckBox" layoutX="825.0" layoutY="65.0" mnemonicParsing="false" text="Broccoli" />
+      <Button fx:id="ClearBtt" layoutX="821.0" layoutY="127.0" mnemonicParsing="false" onAction="#ClearCheckBox" prefHeight="30.0" prefWidth="88.0" styleClass="IngreSearchBtt" stylesheets="@../../App.css" text="Clear" textFill="#ededed" />
+      <Button fx:id="IngreSearchBtt" alignment="CENTER" layoutX="821.0" layoutY="92.0" mnemonicParsing="false" onAction="#SearchRecipeByCheckBox" prefHeight="30.0" prefWidth="88.0" styleClass="IngreSearchBtt" text="Search" textFill="#ededed" />
+      <Label layoutX="944.0" layoutY="100.0" text="Or" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="169.0" layoutY="28.0" prefHeight="17.0" prefWidth="753.0" text="Search With ingredient" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="977.0" layoutY="28.0" prefHeight="17.0" prefWidth="214.0" text="Search with recipe name" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="NameSearchBtt" layoutX="1031.0" layoutY="119.0" mnemonicParsing="false" onAction="#SearchName" prefHeight="30.0" prefWidth="112.0" styleClass="IngreSearchBtt" text="Search" textFill="#ededed" />
+      <TextField fx:id="SearchTF" layoutX="988.0" layoutY="75.0" prefHeight="25.0" prefWidth="197.0" styleClass="TextField" />
+      <ScrollPane fx:id="ViewRecipeDetailScrPane" layoutX="170.0" layoutY="170.0" prefHeight="616.0" prefWidth="1023.0" styleClass="anchorpane" visible="false">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="1003.0" styleClass="anchorpane">
+               <children>
+                  <AnchorPane fx:id="RecipeDetailPane" layoutX="-7.0" prefHeight="597.0" prefWidth="1014.0" styleClass="anchorpane">
+                     <children>
+                        <Label fx:id="RecipeNameLbl" alignment="CENTER" layoutX="177.0" layoutY="14.0" prefHeight="27.0" prefWidth="649.0" text="Reipe name" textFill="WHITE">
+                           <font>
+                              <Font name="Centaur" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="RateLbl" alignment="CENTER" layoutX="39.0" layoutY="514.0" prefHeight="18.0" prefWidth="90.0" text="Rated" />
+                        <Label fx:id="NumOfSavedLbl" alignment="CENTER" layoutX="191.0" layoutY="514.0" prefHeight="18.0" prefWidth="140.0" text="Number of saved" />
+                        <Button fx:id="ReportBtt" layoutX="391.0" layoutY="538.0" mnemonicParsing="false" onAction="#Report" styleClass="custom-button" text="Report" />
+                        <GridPane fx:id="SmallImgPane" hgap="5.0" layoutX="70.0" layoutY="414.0">
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                        <Button fx:id="SaveRecipeBtt" layoutX="205.0" layoutY="537.0" mnemonicParsing="false" onAction="#SaveRecipe" prefHeight="27.0" prefWidth="99.0" styleClass="custom-button" text="SaveRecipe" />
+                        <TextField fx:id="RateTF" layoutX="18.0" layoutY="538.0" onMouseClicked="#settext" prefHeight="26.0" prefWidth="103.0" promptText="Rate this recipe?" styleClass="TextField" />
+                        <Button fx:id="RateBtt" layoutX="129.0" layoutY="537.0" mnemonicParsing="false" onAction="#raterecipe" styleClass="custom-button" text="Rate" />
+                        <Label fx:id="RecipeUserNamelbl" alignment="TOP_LEFT" layoutX="528.0" layoutY="43.0" prefHeight="18.0" prefWidth="178.0" styleClass="UserNameLBL" text="Make by " textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="UnSaveRecipeBtt" disable="true" layoutX="209.0" layoutY="537.0" mnemonicParsing="false" onAction="#UnSaveRecipe" prefHeight="26.0" prefWidth="99.0" styleClass="custom-button" text="UnSaveRecipe" visible="false" />
+                        <Label fx:id="ReportedLbl" layoutX="318.0" layoutY="513.0" prefHeight="20.0" prefWidth="198.0" text="This recipe has been reported " visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#OpenViewRecipeSrcPane" styleClass="custom-button" text="Back" />
+                        <ScrollPane layoutX="431.0" layoutY="94.0" prefHeight="360.0" prefWidth="280.0" styleClass="anchorpane">
+                           <content>
+                              <VBox fx:id="IngreVbox" prefHeight="362.0" prefWidth="263.0" spacing="15.0" styleClass="anchorpane" stylesheets="@../../App.css" />
+                           </content>
+                        </ScrollPane>
+                        <Label alignment="CENTER" layoutX="435.0" layoutY="66.0" prefHeight="20.0" prefWidth="271.0" text="Ingredients" textFill="WHITE">
+                           <font>
+                              <Font name="Lucida Sans Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="728.0" layoutY="66.0" prefHeight="20.0" prefWidth="257.0" text="Steps" textFill="WHITE">
+                           <font>
+                              <Font name="Lucida Sans Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane layoutX="715.0" layoutY="94.0" prefHeight="360.0" prefWidth="281.0" styleClass="anchorpane">
+                           <content>
+                              <VBox fx:id="StepVbox" prefHeight="366.0" prefWidth="1000.0" spacing="15.0" styleClass="anchorpane" />
+                           </content>
+                        </ScrollPane>
+                        <ScrollPane layoutX="520.0" layoutY="490.0" prefHeight="140.0" prefWidth="478.0" styleClass="anchorpane">
+                           <content>
+                              <VBox fx:id="CmtVbox" prefHeight="170.0" prefWidth="461.0" spacing="15.0" styleClass="anchorpane" />
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="524.0" layoutY="467.0" prefHeight="20.0" prefWidth="230.0" text="Some comment about this recipe" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="DelRecipeBtt" layoutX="871.0" layoutY="15.0" mnemonicParsing="false" styleClass="custom-button" text="Delete this recipe?" visible="false" />
+                        <TextField fx:id="CmtTF" layoutX="822.0" layoutY="464.0" prefHeight="26.0" prefWidth="150.0" promptText="Comment on this recipe" styleClass="TextField" />
+                        <ImageView fx:id="BigImageView" fitHeight="336.0" fitWidth="327.0" layoutX="70.0" layoutY="94.0" pickOnBounds="true" />
+                        <ImageView fitHeight="26.0" fitWidth="58.0" layoutX="971.0" layoutY="464.0" onMouseClicked="#AddCmt" pickOnBounds="true" preserveRatio="true" styleClass="UserNameLBL">
+
+                        </ImageView>
+                        <Button fx:id="ToFileBtt" layoutX="465.0" layoutY="539.0" mnemonicParsing="false" styleClass="custom-button" text="To file" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ScrollPane fx:id="ViewRecipeScrPane" layoutX="169.0" layoutY="166.0" prefHeight="616.0" prefWidth="1023.0" styleClass="anchorpane">
+         <content>
+            <AnchorPane fx:id="ViewPane" prefHeight="616.0" prefWidth="1007.0" styleClass="anchorpane">
+               <children>
+                  <GridPane fx:id="RecipeContainer" layoutX="34.0" layoutY="39.0" prefHeight="4.0" prefWidth="2.0">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Button fx:id="MyProfileBtt" layoutX="20.0" layoutY="185.0" mnemonicParsing="false" onAction="#OpenMyprofilePane" prefHeight="26.0" prefWidth="126.0" styleClass="green" text="My profile" />
+      <Button fx:id="ViewRecipeBtt" layoutX="20.0" layoutY="301.0" mnemonicParsing="false" onAction="#OpenViewRecipeSrcPane" prefHeight="26.0" prefWidth="126.0" styleClass="green" text="View Recipe" />
+      <Button fx:id="MakeRecipeBtt" layoutX="21.0" layoutY="345.0" mnemonicParsing="false" onAction="#OpenMakeRecipeSrcPane" prefHeight="26.0" prefWidth="126.0" styleClass="green" text="Make Recipe" />
+      <ScrollPane fx:id="MakeRecipeScrPane" layoutX="171.0" layoutY="170.0" prefHeight="616.0" prefWidth="1023.0" visible="false">
+        <content>
+          <AnchorPane fx:id="AddRecipePane" minHeight="0.0" minWidth="0.0" prefHeight="615.0" prefWidth="1007.0" styleClass="anchorpane">
+               <children>
+                  <Label alignment="CENTER" layoutX="51.0" layoutY="21.0" prefHeight="30.0" prefWidth="116.0" text="Recipe name" />
+                  <TextField fx:id="RecipeNameTF" layoutX="24.0" layoutY="58.0" prefHeight="26.0" prefWidth="297.0" styleClass="TextField" />
+                  <Label alignment="CENTER" layoutX="730.0" layoutY="108.0" prefHeight="48.0" prefWidth="224.0" text="The first image is your recipe avatar">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Button layoutX="784.0" layoutY="158.0" mnemonicParsing="false" onAction="#ChoseImage" prefHeight="26.0" prefWidth="117.0" styleClass="custom-button" text="Add Image" />
+                  <ImageView fx:id="MakeRecipeIV" fitHeight="328.0" fitWidth="300.0" layoutX="693.0" layoutY="194.0" pickOnBounds="true">
+
+                  </ImageView>
+                  <Button layoutX="445.0" layoutY="158.0" mnemonicParsing="false" onAction="#AddIngreToTA" prefHeight="26.0" prefWidth="117.0" styleClass="custom-button" text="Add ingredient" />
+                  <Button layoutX="109.0" layoutY="158.0" mnemonicParsing="false" onAction="#AddStepToTA" prefHeight="26.0" prefWidth="117.0" styleClass="custom-button" text="Add step" />
+                  <TextField fx:id="IngreTF" alignment="CENTER" layoutX="354.0" layoutY="120.0" prefHeight="26.0" prefWidth="171.0" promptText="Ingredient" styleClass="TextField" />
+                  <TextField fx:id="StepTF" alignment="CENTER" layoutX="92.0" layoutY="119.0" prefHeight="26.0" prefWidth="226.0" promptText="Step" styleClass="TextField" />
+                  <Button layoutX="429.0" layoutY="552.0" mnemonicParsing="false" onAction="#SendRecipe" prefHeight="26.0" prefWidth="117.0" styleClass="custom-button" text="Make recipe" />
+                  <TextField fx:id="IngreQuantityTF" alignment="CENTER" layoutX="528.0" layoutY="120.0" prefHeight="26.0" prefWidth="126.0" promptText="Quantity" styleClass="TextField" />
+                  <TextField fx:id="StepOrderTF" alignment="CENTER" layoutX="24.0" layoutY="119.0" prefHeight="26.0" prefWidth="65.0" promptText="Order" styleClass="TextField" />
+                  <Button layoutX="953.0" layoutY="552.0" mnemonicParsing="false" onAction="#NextImg" styleClass="custom-button" text="next" />
+                  <Button layoutX="693.0" layoutY="552.0" mnemonicParsing="false" onAction="#BackImg" styleClass="custom-button" text="back" />
+                  <Button layoutX="828.0" layoutY="552.0" mnemonicParsing="false" onAction="#EditImage" styleClass="custom-button" text="edit" />
+                  <ListView fx:id="StepLV" editable="true" layoutX="18.0" layoutY="194.0" onMouseClicked="#EditStep" prefHeight="328.0" prefWidth="298.0" styleClass="custom-list-view" />
+                  <ListView fx:id="IngreIV" layoutX="354.0" layoutY="194.0" onMouseClicked="#EditIngre" prefHeight="326.0" prefWidth="302.0" styleClass="custom-list-view" />
+                  <Label fx:id="ImgNumlbl" alignment="CENTER" layoutX="817.0" layoutY="526.0" prefHeight="18.0" prefWidth="74.0" text="Image " />
+                  <Button layoutX="18.0" layoutY="552.0" mnemonicParsing="false" onAction="#Clear" prefHeight="27.0" prefWidth="140.0" styleClass="custom-button" text="Clear everything" />
+                  <Button layoutX="18.0" layoutY="159.0" mnemonicParsing="false" onAction="#ClearStep" styleClass="custom-button" text="Clear" />
+                  <Button layoutX="354.0" layoutY="158.0" mnemonicParsing="false" onAction="#ClearIngre" styleClass="custom-button" text="Clear" />
+                  <Button layoutX="691.0" layoutY="158.0" mnemonicParsing="false" onAction="#Clearimg" styleClass="custom-button" text="Clear" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <AnchorPane fx:id="MyProfilePane" layoutX="172.0" layoutY="170.0" prefHeight="616.0" prefWidth="1023.0" styleClass="anchorpane" stylesheets="@../../App.css" visible="false">
+         <children>
+            <ImageView fx:id="BackGroundIV" fitHeight="318.0" fitWidth="810.0" layoutX="102.0" layoutY="3.0" pickOnBounds="true">
+
+            </ImageView>
+            <ImageView fx:id="BigUserAvatar" fitHeight="204.0" fitWidth="207.0" layoutX="137.0" layoutY="240.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../java/Images/AvatarDefault.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="NumOfSavedRecipeLbl" layoutX="607.0" layoutY="385.0" prefHeight="27.0" prefWidth="230.0" text="Number of saved recipe">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="UserNameLbl" layoutX="351.0" layoutY="328.0" prefHeight="27.0" prefWidth="214.0" text="Username:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="ChangeAvatarBtt" layoutX="185.0" layoutY="454.0" mnemonicParsing="false" onAction="#ChangeAvatar" prefHeight="27.0" prefWidth="112.0" styleClass="custom-button" text="Change avatar" />
+            <Label fx:id="EmailLbl" layoutX="603.0" layoutY="444.0" prefHeight="27.0" prefWidth="380.0" text="Email">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="DOBlbl" layoutX="603.0" layoutY="414.0" prefHeight="27.0" prefWidth="214.0" text="Date of birth">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="EditBtt" layoutX="641.0" layoutY="486.0" mnemonicParsing="false" onAction="#EditProfile" prefHeight="27.0" prefWidth="126.0" styleClass="custom-button" text="Edit your profile" />
+            <Label fx:id="TitleLbl" layoutX="351.0" layoutY="358.0" prefHeight="27.0" prefWidth="214.0" text="Title:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="PhoneLbl" layoutX="608.0" layoutY="358.0" prefHeight="27.0" prefWidth="214.0" text="Phone">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="SaveBtt" layoutX="741.0" layoutY="500.0" mnemonicParsing="false" onAction="#SaveProfile" styleClass="custom-button" text="Save" visible="false" />
+            <Button fx:id="CancelBtt" layoutX="621.0" layoutY="500.0" mnemonicParsing="false" onAction="#CancelSaveProfile" styleClass="custom-button" text="Cancel" visible="false" />
+            <ComboBox fx:id="TitleComboBox" layoutX="394.0" layoutY="359.0" prefWidth="150.0" styleClass="custom-combo-box" visible="false" />
+            <TextField fx:id="UsernameTF" layoutX="437.0" layoutY="329.0" styleClass="TextField" visible="false" />
+            <TextField fx:id="EmailTF" layoutX="659.0" layoutY="446.0" styleClass="TextField" visible="false" />
+            <TextField fx:id="PhoneTF" layoutX="666.0" layoutY="359.0" styleClass="TextField" visible="false" />
+            <DatePicker fx:id="DOBDatepicker" layoutX="708.0" layoutY="415.0" promptText="DOBDatepicker" styleClass="custom-date-picker" visible="false" />
+            <Label layoutX="627.0" layoutY="328.0" prefHeight="27.0" prefWidth="214.0" text="Other infomation">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="ChangeBackGroundBtt" layoutX="171.0" layoutY="486.0" mnemonicParsing="false" onAction="#ChangeBackGround" prefHeight="27.0" prefWidth="140.0" styleClass="custom-button" text="Change background" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="ViewMyBtt" layoutX="20.0" layoutY="221.0" mnemonicParsing="false" onAction="#ViewMyRecipe" prefHeight="26.0" prefWidth="126.0" styleClass="green" text="View my recipe" />
+      <Button fx:id="ViewSavedRecipe" layoutX="20.0" layoutY="261.0" mnemonicParsing="false" onAction="#ViewSavedRecipe" prefHeight="26.0" prefWidth="126.0" style="-fx-border-radius: 0px;" styleClass="green" text="View saved recipe" />
+   </children>
+</AnchorPane>

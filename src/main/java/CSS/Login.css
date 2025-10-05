@@ -1,0 +1,97 @@
+.imageview{
+    -fx-width: 300px;
+    -fx-height: 300px;
+
+    -fx-background-size: cover;
+    -fx-background-position: right;
+    -fx-border-radius: 5px;
+}
+.UserNameTF {
+    -fx-background-color: #a9a9a9 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+.UserNameTF:focused {
+    -fx-background-color: #a9a9a9 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+.check-box .box {
+
+    -fx-background-color: white;
+    -fx-border-color:grey;
+    -fx-border-radius:3px;
+
+}
+.button-33 {
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-33:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.check-box:selected .mark {
+
+    -fx-background-color: white;
+
+}
+
+.check-box:selected .box {
+
+    -fx-background-color: #28a3f4;
+}
+.LogInPane{
+    -fx-width: 55%;
+    -fx-margin-bottom: 20px;
+}
+.ParentPane{
+    -fx-width: 750px;
+    -fx-height: 605px;
+    -fx-background-color: #FDF8E9;
+    -fx-padding: 30px;
+    -fx-border: 10px solid #ddd;
+    -fx-border-radius: 10px;
+    -fx-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -fx-display: flex;
+    -fx-justify-content: space-between;
+    -fx-align-items: center;
+}
+.PasswordPF{
+    -fx-width: 100%;
+    -fx-padding: 10px;
+    -fx-border: 1px solid #ccc;
+    -fx-border-radius: 5px;
+}
+.usernamelabel{
+    -fx-display: block;
+    -fx-margin-bottom: 10px;
+    -fx-font-weight: bold;
+}
+.passwordlabel{
+    -fx-display: block;
+    -fx-margin-bottom: 10px;
+    -fx-font-weight: bold;
+}
+.LogInBtt{
+    -fx-background-color: #4CAF50;
+    -fx-color: #fff;
+    -fx-padding: 10px 20px;
+    -fx-border: none;
+    -fx-border-radius: 5px;
+}

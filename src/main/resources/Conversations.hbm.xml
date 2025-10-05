@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="gutfud.dacs.DTO.Conversations" table="conversations" schema="gutfud">
+        <id name="id">
+            <column name="id" sql-type="int unsigned"/>
+        </id>
+        <property name="user1Id">
+            <column name="User1ID" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="user2Id">
+            <column name="User2ID" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="createdAt">
+            <column name="created_at" sql-type="timestamp" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

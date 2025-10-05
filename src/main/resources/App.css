@@ -1,0 +1,216 @@
+.anchorpane
+{
+        -fx-text-fill: #FFFFFFFF;
+    -fx-background-color: #373A40;
+
+}
+
+.check-box:selected .mark {
+
+    -fx-background-color: white;
+
+}
+.TextField {
+    -fx-background-color: #686D76 , green , #686D76;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+.TextField:focused {
+    -fx-background-color: #686D76 !important;
+    -fx-border-color: #777 !important;
+}
+.TextField.text-field {
+     -fx-background-color: #686D76 !important;
+ }
+
+.TextField.text-input {
+    -fx-background-color: #686D76 !important;
+}
+
+.IngreSearchBtt
+{
+    -fx-background-radius: 5px;
+    -fx-background-color: #FF8F00;
+}
+.TextField:focused {
+    -fx-background-color: #a9a9a9 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+.check-box:selected .box {
+
+    -fx-background-color: #28a3f4;
+}
+.check-box
+{
+    -fx-font-family: Lucida Sans;
+    -fx-font-style: italic;
+    -fx-text-fill: white;
+}
+.label
+{
+    -fx-text-fill: white;
+
+}
+.headerlabel
+{
+    -fx-font-family: Centaur;
+    -fx-text-fill: #ff8f00;
+}
+.Button{
+    -fx-background-color: #d6ea8a;
+}
+.green {
+    -fx-background-color:
+            linear-gradient(#ccffcc  , #008000  ),
+            radial-gradient(center 50% -40%, radius 200%, #b8ee36 45%, #ffd700 50%);
+    -fx-background-radius: 6, 5;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: #395306;
+    -fx-border-radius: 0px;
+}
+
+.image-container {
+    position: relative;  /* Needed for proper shadow positioning */
+    overflow: hidden;  /* Clip content to avoid shadow bleeding outside */
+    width: 600px;  /* Adjust width as needed */
+    height: 400px;  /* Adjust height as needed */
+}
+
+.rounded-shadow {
+    -fx-shape: rect;
+    -fx-effect: dropshadow(
+            three-pass-box ,
+            rgb(55, 58, 64,0.5) ,
+            5, 0.0 , 4 , 5 );
+
+}
+.vbox
+{
+    -fx-padding: 10px;
+    -fx-background-color: #686D76;
+    -fx-background-radius: 5px;
+
+}
+.hbox{
+    -fx-background-color: #686D76;
+
+}
+/*.label*/
+/*{*/
+/*    -fx-font-family: Roboto;*/
+/*}*/
+
+.UserNameLBL:hover
+{
+    -fx-cursor: hand;  /* Might not work consistently */
+
+}
+
+.scroll-pane .scroll-bar .track {
+    -fx-background-color: #cccccc; /* Track color */
+}
+
+/* Customize the scrollbar thumb */
+.scroll-pane .scroll-bar .thumb {
+    -fx-background-color: #777777; /* Thumb color */
+    -fx-background-insets: 0; /* Ensure the thumb color fills the whole thumb */
+    -fx-background-radius: 5px; /* Round the corners of the thumb */
+}
+
+/* Customize the scrollbar increment and decrement buttons */
+.scroll-pane .scroll-bar .increment-button,
+.scroll-pane .scroll-bar .decrement-button {
+    -fx-background-color: #cccccc; /* Button color */
+}
+
+/* Optionally, customize the scrollbar when hovered */
+.scroll-pane .scroll-bar:hover .thumb {
+    -fx-background-color: #555555; /* Thumb color when hovered */
+}
+
+.custom-button {
+    -fx-background-color: #333; /* Dark gray background */
+    -fx-background-radius: 5; /* Slightly rounded corners */
+    -fx-text-fill: yellow; /* Yellow text */
+    -fx-padding: 5 15; /* Smaller padding */
+    -fx-text-alignment: left;
+    -fx-font-size: 12px; /* Smaller font size */
+    -fx-cursor: hand; /* Hand cursor on hover */
+}
+
+.custom-button:hover {
+    -fx-background-color: #555; /* Lighter gray background */
+    -fx-text-fill: limegreen; /* Green text when hovered */
+}
+
+.custom-button:pressed {
+    -fx-background-color: #222; /* Darker gray background */
+}
+.custom-list-view {
+    -fx-background-color: #686D76; /* Background color */
+}
+
+.custom-list-view .list-cell {
+    -fx-background-color:#686D76 ;
+    -fx-text-fill: white; /* White-gray text */
+}
+
+
+/* Basic styling for the ComboBox */
+.custom-combo-box {
+    -fx-background-color: #686D76; /* Background color */
+    -fx-text-fill: white; /* White-gray text */
+}
+
+/* Arrow button color for the ComboBox */
+.custom-combo-box .arrow-button {
+    -fx-background-color: #686D76; /* Background color */
+    -fx-background-radius: 0; /* Remove arrow button rounded corners */
+}
+
+/* Popup background color for the ComboBox */
+
+.custom-combo-box .context-menu {
+    -fx-background-color: #686D76; /* Background color */
+}
+
+.custom-combo-box .list-cell {
+    -fx-background-color: #9DA1AA; /* Background color for items */
+    -fx-text-fill: white; /* White-gray text */
+}
+
+/* DatePicker popup background */
+.custom-date-picker .date-picker-popup {
+    -fx-background-color: #686D76; /* Background color */
+}
+
+/* DatePicker cells (days) */
+.custom-date-picker .date-picker-popup .day-cell,
+.custom-date-picker .date-picker-popup .date-cell {
+    -fx-background-color: #686D76; /* Background color */
+    -fx-text-fill: white; /* Text color */
+}
+
+/* DatePicker header (month and year selection) */
+.custom-date-picker .date-picker-popup .calendar-pane .top-pane {
+    -fx-background-color: #686D76; /* Background color */
+}
+
+/* DatePicker header labels */
+.custom-date-picker .date-picker-popup .calendar-pane .month-year-pane .label {
+    -fx-text-fill: white; /* Text color */
+}
+
+/* DatePicker navigation buttons */
+.custom-date-picker .date-picker-popup .calendar-pane .button {
+    -fx-background-color: #686D76; /* Background color */
+    -fx-text-fill: white; /* Text color */
+}
+
+/* DatePicker text field */
+.custom-date-picker .text-field {
+    -fx-background-color: #686D76; /* Background color */
+    -fx-text-fill: white; /* Text color */
+    -fx-prompt-text-fill: white; /* Prompt text color */
+}
+

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="gutfud.dacs.DTO.Savedrecipedetails" table="savedrecipedetails" schema="gutfud">
+        <composite-id class="gutfud.dacs.DTO.SavedrecipedetailsPK">
+            <key-property name="RecipeName" column="RecipeName">
+            </key-property>
+            <key-property name="UserName" column="UserName">
+            </key-property>
+            <key-property name="Recipe_UserName">
+                <column name="Recipe_UserName"  not-null="true"/>
+            </key-property>
+        </composite-id>
+        <property name="dateSaved">
+            <column name="DateSaved" sql-type="date" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

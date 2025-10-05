@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpaBuddyIdeaProjectConfig" ddlActionDbType="mysql">
+    <option name="defaultUnitInitialized" value="true" />
+    <option name="renamerInitialized" value="true" />
+    <option name="reverseEngineeringLastDbConnectionId" value="60e27600-16b9-4895-8070-71af9c8e6fde" />
+    <option name="reLastEntityCreationPackage" value="src/main/java/gutfud/dacs/DTO" />
+  </component>
+</project>

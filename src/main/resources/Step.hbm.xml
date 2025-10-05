@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="gutfud.dacs.DTO.Step" table="step" schema="gutfud">
+        <composite-id class="gutfud.dacs.DTO.StepPK">
+            <key-property name="RecipeName" column="RecipeName">
+            </key-property>
+            <key-property name="UserName" column="UserName">
+            </key-property>
+            <key-property name="StepOrder" column="StepOrder">
+            </key-property>
+        </composite-id>
+        <property name="content">
+            <column name="Content" sql-type="varchar(255)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

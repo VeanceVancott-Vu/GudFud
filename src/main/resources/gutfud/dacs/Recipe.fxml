@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="218.0" styleClass="vbox" stylesheets="@../../App.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gutfud.dacs.RecipeForm">
+   <children>
+      <ImageView fx:id="ImageView" fitHeight="228.0" fitWidth="193.0" nodeOrientation="INHERIT" pickOnBounds="true" styleClass="rounded-shadow">
+      </ImageView>
+      <Label fx:id="Recipelbl" alignment="CENTER" prefHeight="26.0" prefWidth="161.0" text="Click to see more">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="Usernamelbl" prefHeight="20.0" prefWidth="258.0" text="UserName">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="Datelbl" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="240.0" text="Date">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>

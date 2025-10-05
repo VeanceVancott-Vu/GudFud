@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ParentPane" prefHeight="605.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gutfud.dacs.LoginController">
+    <children>
+        <AnchorPane fx:id="LogInPane" layoutX="597.0" layoutY="3.0" prefHeight="598.0" prefWidth="338.0">
+            <children>
+                <TextField fx:id="UserNameTF" layoutX="24.0" layoutY="252.0" prefHeight="26.0" prefWidth="194.0" styleClass="UserNameTF" stylesheets="@../../Login.css" />
+                <PasswordField fx:id="PasswordPF" layoutX="24.0" layoutY="332.0" prefHeight="26.0" prefWidth="194.0" styleClass="UserNameTF" stylesheets="@../../Login.css" />
+                <Label layoutX="24.0" layoutY="218.0" prefHeight="26.0" prefWidth="194.0" text="Username" textAlignment="CENTER">
+                    <font>
+                        <Font name="Microsoft JhengHei UI Light" size="18.0" />
+                    </font>
+                </Label>
+                <Button fx:id="LogInBtt" layoutX="78.0" layoutY="383.0" mnemonicParsing="false" onAction="#Login" prefHeight="27.0" prefWidth="86.0" styleClass="green" stylesheets="@../../Login.css" text="Log in">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Label fx:id="RegisterLine" layoutX="24.0" layoutY="424.0" onMouseClicked="#OpenRegisterPane" prefHeight="19.0" prefWidth="194.0" text="Has no acccount? Sign up here.">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <Label fx:id="ForgotPass" layoutX="24.0" layoutY="364.0" onMouseClicked="#OpenForgotPassPane" prefHeight="19.0" prefWidth="180.0" text="Forgot password? click here">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <CheckBox fx:id="ShowPassCheckBox" layoutX="223.0" layoutY="337.0" mnemonicParsing="false" onAction="#togglevisiblePassword" stylesheets="@../../Login.css" text="Show password" />
+                <TextField fx:id="PassShowTF" layoutX="24.0" layoutY="332.0" prefHeight="26.0" prefWidth="194.0" styleClass="UserNameTF" stylesheets="@../../Login.css" visible="false" />
+            <Label layoutX="25.0" layoutY="292.0" prefHeight="26.0" prefWidth="194.0" text="Password" textAlignment="CENTER">
+               <font>
+                  <Font name="Microsoft JhengHei UI Light" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="TitleLbl2" alignment="CENTER" layoutX="90.0" layoutY="56.0" prefHeight="70.0" prefWidth="219.0" text="Gut Fud" textFill="#949e3b">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="43.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+      <AnchorPane fx:id="ForgotPassPane" layoutX="600.0" layoutY="6.0" prefHeight="598.0" prefWidth="338.0" stylesheets="@../../Login.css" visible="false">
+         <children>
+            <TextField fx:id="FoEmailTF" layoutX="19.0" layoutY="209.0" prefHeight="26.0" prefWidth="194.0" styleClass="UserNameTF" />
+            <TextField fx:id="OTPTF" layoutX="20.0" layoutY="209.0" prefHeight="26.0" prefWidth="194.0" styleClass="UserNameTF" visible="false" />
+            <PasswordField fx:id="FoPasswordF" layoutX="20.0" layoutY="206.0" prefHeight="26.0" prefWidth="194.0" styleClass="UserNameTF" visible="false" />
+            <PasswordField fx:id="FoNewPasswordF" layoutX="20.0" layoutY="277.0" prefHeight="26.0" prefWidth="194.0" styleClass="UserNameTF" visible="false" />
+            <TextField fx:id="FoPassShowF" layoutX="20.0" layoutY="206.0" prefHeight="26.0" prefWidth="194.0" styleClass="UserNameTF" visible="false" />
+            <TextField fx:id="FoNewPassShowF" layoutX="20.0" layoutY="277.0" prefHeight="26.0" prefWidth="194.0" styleClass="UserNameTF" visible="false" />
+            <Label fx:id="EmailLbl" layoutX="19.0" layoutY="174.0" prefHeight="26.0" prefWidth="194.0" text="Email">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="NewPassWordLbl" layoutX="20.0" layoutY="175.0" prefHeight="26.0" prefWidth="194.0" text="Newpassword" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="ReWritePassLbl" layoutX="20.0" layoutY="236.0" prefHeight="26.0" prefWidth="194.0" text="Rewrite newpassword" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="FoShowPassCheckBox" layoutX="222.0" layoutY="210.0" mnemonicParsing="false" onAction="#FotogglevisiblePassword" styleClass="ShowPassCheckBox" text="Show password" visible="false" />
+            <Button fx:id="ConfrimBtt" layoutX="117.0" layoutY="317.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="86.0" styleClass="green" text="Confirm" visible="false" />
+            <CheckBox fx:id="FoShowNewPassCheckBox" layoutX="222.0" layoutY="281.0" mnemonicParsing="false" onAction="#FotogglevisibleNewPassword" styleClass="ShowPassCheckBox" text="Show password" visible="false" />
+            <Label fx:id="PassNotMatchLbl" layoutX="20.0" layoutY="445.0" prefHeight="18.0" prefWidth="144.0" text="Newpassword not match" textFill="RED" visible="false" />
+            <Label fx:id="OTPlbl" layoutX="16.0" layoutY="175.0" prefHeight="26.0" prefWidth="194.0" text="OTP" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="TitleLbl" alignment="CENTER" layoutX="60.0" layoutY="26.0" prefHeight="70.0" prefWidth="219.0" text="Gut Fud" textFill="#949e3b">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="43.0" />
+               </font>
+            </Label>
+            <Button fx:id="SendOTPbtt" layoutX="121.0" layoutY="249.0" mnemonicParsing="false" onAction="#SendEmail" prefHeight="30.0" prefWidth="86.0" styleClass="green" text="Send OTP" />
+            <Button fx:id="CheckOTPBtt" layoutX="74.0" layoutY="249.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="86.0" styleClass="green" text="Confirm" visible="false" />
+            <Button fx:id="BackToLoginBtt" layoutX="20.0" layoutY="249.0" mnemonicParsing="false" onAction="#OpenLoginPane" prefHeight="30.0" prefWidth="86.0" styleClass="green" text="back to login" />
+         </children>
+      </AnchorPane>
+        <AnchorPane fx:id="RegisterPane" layoutX="604.0" layoutY="9.0" prefHeight="592.0" prefWidth="338.0" stylesheets="@../../Login.css" visible="false">
+            <children>
+            <Label fx:id="TitleLbl1" alignment="CENTER" layoutX="60.0" layoutY="14.0" prefHeight="70.0" prefWidth="219.0" text="Gut Fud" textFill="#949e3b">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="43.0" />
+               </font>
+            </Label>
+                <TextField fx:id="ReUserNameTF" layoutX="10.0" layoutY="130.0" prefHeight="26.0" prefWidth="194.0" styleClass="UserNameTF" />
+            <PasswordField fx:id="RePasswordF" layoutX="14.0" layoutY="199.0" prefHeight="26.0" prefWidth="194.0" styleClass="UserNameTF" />
+                <TextField fx:id="RePhoneTF" layoutX="11.0" layoutY="322.0" prefHeight="26.0" prefWidth="194.0" styleClass="UserNameTF" />
+                <TextField fx:id="ReEmailTF" layoutX="14.0" layoutY="459.0" prefHeight="26.0" prefWidth="194.0" styleClass="UserNameTF" />
+                <Label layoutX="10.0" layoutY="95.0" prefHeight="26.0" prefWidth="194.0" text="Username" textAlignment="CENTER">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="11.0" layoutY="162.0" prefHeight="26.0" prefWidth="194.0" text="Password" textAlignment="CENTER">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="11.0" layoutY="290.0" prefHeight="26.0" prefWidth="194.0" text="Phone" textAlignment="CENTER">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="11.0" layoutY="354.0" prefHeight="26.0" prefWidth="194.0" text="Date of birth" textAlignment="CENTER">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="10.0" layoutY="423.0" prefHeight="26.0" prefWidth="194.0" text="Email" textAlignment="CENTER">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Button fx:id="SignInBTT" layoutX="111.0" layoutY="507.0" mnemonicParsing="false" onAction="#Register" prefHeight="27.0" prefWidth="86.0" styleClass="green" text="Sign in">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <DatePicker fx:id="ReDOB" layoutX="10.0" layoutY="390.0" prefHeight="27.0" prefWidth="194.0" />
+            <CheckBox fx:id="ReShowPassCheckBox" layoutX="231.0" layoutY="205.0" mnemonicParsing="false" onAction="#RetogglevisiblePassword" text="Show password" />
+                <TextField fx:id="RePassShowTF" layoutX="14.0" layoutY="199.0" prefHeight="26.0" prefWidth="194.0" visible="false" />
+            <Label layoutX="10.0" layoutY="233.0" prefHeight="26.0" prefWidth="194.0" text="Title" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="TitleComboBox" layoutX="14.0" layoutY="260.0" prefHeight="26.0" prefWidth="194.0" />
+            <Button layoutX="14.0" layoutY="505.0" mnemonicParsing="false" onAction="#OpenLoginPane" prefHeight="30.0" prefWidth="86.0" styleClass="green" text="back to login" />
+            </children>
+        </AnchorPane>
+        <ImageView fx:id="ImageView" fitHeight="598.0" fitWidth="598.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../LoginImage.jpg" />
+         </image></ImageView>
+    </children>
+</AnchorPane>
